@@ -1,0 +1,18 @@
+.Samsung-icon {
+    width: auto;
+    margin-right: 11%!important;
+    margin-left: 11%!important;
+}
+
+.left {
+    width: auto;
+    margin-left: 5%!important;
+    margin-right: 5%!important;
+    font-family: 'SamsungSharpSans'!important;
+}
+
+.right {
+    width: auto;
+    margin-right: 5%!important;
+    margin-left: 5%!important;
+}
