@@ -10,31 +10,27 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faCircle } from '@fortawesome/free-solid-svg-icons'
 import './Header.css';
-import imgUp from './samsung_delivers-1440.jpg'
 
 function Header() {
   return ( 
     <Container fluid>
       <Navbar bg="light header" expand="lg">
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="#home">МОБИЛЬНЫЕ УСТРОЙСТВА</Nav.Link>
             <Nav.Link href="#features">ТВ И АУДИО</Nav.Link>
             <Nav.Link href="#pricing">ДЛЯ ДОМА</Nav.Link>
             <Nav.Link href="#pricing">IT</Nav.Link>
           </Nav>
-        </Navbar.Collapse>  
 
-        <Navbar.Brand href="#home">
+        <div class="text-center sams"><Navbar.Brand href="#home">
           <Image
             src="https://img.global.news.samsung.com/ru/wp-content/uploads/2017/11/Samsung-logo.jpg"
             width="22%"
             className="d-inline-block align-top"
           />
-        </Navbar.Brand>
+        </Navbar.Brand></div>
 
-        <Navbar.Collapse id="basic-navbar-nav">  
+    
           <Nav className="mr-auto">
             <Nav.Link href="#home">EXPLORE</Nav.Link>
             <Nav.Link href="#home">АКЦИИ</Nav.Link>
@@ -42,7 +38,7 @@ function Header() {
             <Nav.Link href="#home">БИЗНЕС</Nav.Link>
             <Nav.Link href="#home"><FontAwesomeIcon icon={faSearch}/></Nav.Link>
           </Nav>
-        </Navbar.Collapse>
+       
       </Navbar>
       <Jumbotron className="upImage" fluid>
         <h1 className="upText1">Выбери Galaxy A</h1>
@@ -80,9 +76,38 @@ function Header() {
       <h2 className="thirdHeader">Заполни форму ниже и участвуй в розыгрыше призов</h2>
 
       {/* ФОРМА С БЭКЭНДОМ */}
-
-      <h2 className="secondHeader"><p>Модели смартфонов</p> <p>участвующие в Акции</p></h2>
-
+      <h2 className="secondHeader"><p>Модель смартфонов</p><p>участвующие в Акции</p></h2>
+      <div class='text-center lastTable'>
+      <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Модель</th>
+            <th scope="col">Сумма промо-кода</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Galaxy-A51</th>
+            <td>5,000 тенге</td>
+          </tr>
+          <tr>
+            <th scope="row">Galaxy-A70</th>
+            <td>5,000 тенге</td>
+          </tr>
+          <tr>
+            <th scope="row">Galaxy-A71</th>
+            <td>7,000 тенге</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="text-center"><Button variant="outline-dark bt1 bt2">Подробнее</Button></div>
+      <Jumbotron className="botImage" fluid>
+      </Jumbotron>
+      <h2 className="secondHeader"><p>В акции участвуют точки продаж официальных</p><p>партнеров Samsung</p></h2>
+      <h2 className="thirdHeader">Выбери нужный из списка магазинов в твоем городе</h2>
+      <Jumbotron className="botImage2" fluid>
+      </Jumbotron>
     </Container>
     );
   }
