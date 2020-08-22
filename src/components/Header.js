@@ -8,6 +8,11 @@ import Image from 'react-bootstrap/Image'
 import Container from 'react-bootstrap/Container'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import icon1 from './icon 1.png'
+import icon2 from './icon 2.png'
+import icon3 from './icon 3.png'
+import footer_img from './IMG.png'
+import components_img from './components.png'
 import { faSearch, faCircle } from '@fortawesome/free-solid-svg-icons'
 import './Header.css';
 
@@ -43,34 +48,63 @@ function Header() {
       <Jumbotron className="upImage" fluid>
         <h1 className="upText1">Выбери Galaxy A</h1>
         <h3 className="upText2">Получи вкусный подарок с доставкой на дом!</h3>
-        <h5 className="upText3">Купи смартфон серии Galaxy A.</h5>
-        <h5 className="upText3">Получи промо-код на 5000 или 7000 тенге в приложении Glovo.</h5>
-        <h5 className="upText3">Период акции с 20 апреля по 26 апреля 2020 года</h5>
-        <div class="text-center"><Button variant="outline-dark bt1">Регистрация</Button> <Button variant="link bt1 underL">Узнать больше</Button></div>
+        <h5 className="upText3">Купи смартфон серии Galaxy A. <br></br>Получи промо-код на 5000 или 7000 тенге в приложении Glovo.<br></br> Период акции с 20 апреля по 26 апреля 2020 года</h5>
+        <Container>
+        <Row>
+        <Col lg={3}>
+          </Col>
+          <Col lg={3}>
+          <div class="text-center">
+          <Button variant="outline-dark bt1">Регистрация</Button>
+          </div>
+          </Col>
+          <Col lg={3}>
+          <div class="text-center">
+          <Button variant="link bt1 underL">Узнать больше</Button>
+          </div>
+          </Col>
+          <Col lg={3}>
+          </Col>
+
+          
+        </Row>
+        </Container>
+        
       </Jumbotron>
       <h2 className="secondHeader">Условия акции</h2>
-      <Row>
-    <Col>
-      <h1 className="midIcon">K</h1>
-      <div class="text-center bt1">Купи смартфон А-серии</div>
-      <div class="text-center bt1">из списка ниже в магазинах </div>
-      <div class="text-center bt1">офийиальных партнеров</div>
-      <div class="text-center bt1">Samsung</div>
-    </Col>
-    <FontAwesomeIcon className="dot" icon={faCircle}/>
-    <Col>
-      <h1 className="midIcon">n</h1>
-      <div class="text-center bt1">Зарегистрируй чек покупки</div>
-      <div class="text-center bt1">на сайте, прикрепив его фото</div>
-    </Col>
-    <FontAwesomeIcon className="dot" icon={faCircle}/>
-    <Col>
-      <h1 className="midIcon">p</h1>
-      <div class="text-center bt1">Получи промо-код на 5000</div>
-      <div class="text-center bt1">или 7000 тенге в в</div>
-    </Col>
-      </Row>
-      <div class="text-center"><Button variant="outline-dark bt1 bt2">ПОЛНЫЕ ПРАВИЛА</Button></div>
+      <Container>
+        <Row>
+          <Col sm={4}>
+            <div class="icon-style">
+            <Image src={icon1}/>
+            </div>
+            
+            <p class="text-center bt1">Купи смартфон А-серии из списка ниже в магазинах офийиальных партнеров Samsung</p>
+          </Col>
+          {/* <Col sm={3}>
+              <FontAwesomeIcon className="dot" icon={faCircle}/>          
+          </Col> */}
+          
+          <Col sm={4}>
+          <div class="icon-style">
+            <Image src={icon2}/>
+            </div>
+            <p class="text-center bt1">Зарегистрируй чек покупки на сайте, прикрепив его фото</p>
+          </Col>
+          {/* <Col sm={3}>
+            <FontAwesomeIcon className="dot" icon={faCircle}/>
+          </Col> */}
+          
+          <Col sm={4}>
+          <div class="icon-style">
+            <Image src={icon3}/>
+            </div>
+            <p class="text-center bt1">Получи промо-код на 5000 или 7000 тенге в в</p>
+          </Col>
+        </Row>
+      </Container>
+      
+      <div class="button-style"><Button variant="outline-dark bt2">ПОЛНЫЕ ПРАВИЛА</Button></div>
       <h2 className="thirdHeader">Доставка Glovo доступна в трех городах: Нур-Султан, Алматы и Шымкент</h2>
       <h2 className="secondHeader">Регистрация</h2>
       <h2 className="thirdHeader">Заполни форму ниже и участвуй в розыгрыше призов</h2>
@@ -91,7 +125,8 @@ function Header() {
         <div class="text-center"><Button variant="outline-dark bt1 bt2">ОТПРАВИТЬ ДАННЫЕ</Button></div>
       </form>
       
-      <h2 className="secondHeader"><p>Модель смартфонов</p><p>участвующие в Акции</p></h2>
+      <h2 className="secondHeader"><p>Модель смартфонов, <br></br> участвующие в Акции</p></h2>
+      <Container>
       <div class='text-center lastTable'>
       <table class="table">
         <thead class="thead-light">
@@ -116,13 +151,20 @@ function Header() {
         </tbody>
       </table>
       </div>
+      </Container>
+      
       <div class="text-center"><Button variant="outline-dark bt1 bt2">Подробнее</Button></div>
-      <Jumbotron className="botImage" fluid>
-      </Jumbotron>
-      <h2 className="secondHeader"><p>В акции участвуют точки продаж официальных</p><p>партнеров Samsung</p></h2>
+      <div class="text-center">
+      <Image src={footer_img}/>
+
+      </div>
+      
+      <h2 className="secondHeader"><p>В акции участвуют точки продаж официальных <br></br>партнеров Samsung</p></h2>
       <h2 className="thirdHeader">Выбери нужный из списка магазинов в твоем городе</h2>
-      <Jumbotron className="botImage2" fluid>
-      </Jumbotron>
+      <div class="text-center">
+      <Image src={components_img}/>
+
+      </div>
     </Container>
     );
   }
