@@ -9,7 +9,7 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header></Header>
+    <Header />
   </React.StrictMode>,
   document.getElementById('root')
 );

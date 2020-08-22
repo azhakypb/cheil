@@ -75,7 +75,22 @@ function Header() {
       <h2 className="secondHeader">Регистрация</h2>
       <h2 className="thirdHeader">Заполни форму ниже и участвуй в розыгрыше призов</h2>
 
-      {/* ФОРМА С БЭКЭНДОМ */}
+      <form class="validForm">
+      <div class="form-group">
+          <label for="fullName">ФИО</label>
+          <input type="name" class="form-control" id="exampleInputName1" aria-describedby="nameHelp"/>
+        </div>
+        <div class="form-group">
+          <label for="mail">Ваш email</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+        </div>
+        <div class="form-group">
+          <label for="phone">Телефон</label>
+          <input type="tel" class="form-control"/>
+        </div>
+        <div class="text-center"><Button variant="outline-dark bt1 bt2">ОТПРАВИТЬ ДАННЫЕ</Button></div>
+      </form>
+      
       <h2 className="secondHeader"><p>Модель смартфонов</p><p>участвующие в Акции</p></h2>
       <div class='text-center lastTable'>
       <table class="table">
