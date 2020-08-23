@@ -1,6 +1,6 @@
 # cheil
 
-This project is a part of a test to evaluate my abilities.
+This project is a part of a test to evaluate my abilities.\n
 Objectives:
   1.Recreate a single page
   2.Make page adaptive/responsive
