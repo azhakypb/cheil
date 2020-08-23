@@ -9,11 +9,14 @@ import { Button, Form} from 'react-bootstrap';
 import axios from 'axios'
 
 class App extends Component {
-  state = {
-    fullName: '',
-    email: '',
-    phone: '',
-};
+  constructor(props) {
+    super(props);
+    this.state = {
+      fullName: '',
+      email: '',
+      phone: '',
+  };
+}
 
 handleFullName = event => {
   this.setState({
@@ -34,37 +37,29 @@ handlePhone = event => {
 handleSubmit = event => {
   event.preventDefault();
 
+  const { fullName, email, phone } = this.state;
+
   const user = {
       fullName: this.state.fullName,
       email: this.state.email,
       phone: this.state.phone,
   };
 
-  //x-www-form 
-  let formBody = [];
-  for (let property in user) {
-      let encodedKey = encodeURIComponent(property);
-      let encodedValue = encodeURIComponent(user[property]);
-      formBody.push(encodedKey + "=" + encodedValue);
-  }
-  formBody = formBody.join("&");
-
-  console.log(formBody);
-
-  axios.post(`http://localhost:8000/`, { formBody }, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
-    .then(res => {
-      console.log(res);
-      console.log(res.data);
-  })
-}
-
+  axios
+    .post('http://localhost:8000/create', user)
+    .then(() => console.log('Data Created'))
+    .catch(err =>{
+      console.error(err);
+    });
+    event.target.reset()
+  };
     render() {
         return (
           <div>
             <UpperHeader></UpperHeader>
             <AfterHeader></AfterHeader>
             <MidIcon></MidIcon>
-            <Form className="validForm" onSubmit={this.handleSubmit}>
+            <Form className="validForm" onSubmit={this.handleSubmit.bind(this)}>
               <Form.Group controlId="formGroupName">
                   <Form.Label>ФИО</Form.Label>
                   <Form.Control onChange={this.handleFullName} value={this.name} type="name" placeholder="Имя Фамилия Отчество" />
