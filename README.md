@@ -7,5 +7,6 @@ Objectives:<br />
   3.Construct a simple form ---------------------> DONE<br />
   4.Implement Validation to the form ------------> DONE<br />
   5.Add simple backend API ----------------------> DONE<br />
+  6.Connect Front-End to API --------------------> DONE<br />
   6.Send data from the form to the API          <br />
   7.Save recieved data to the database          <br />
