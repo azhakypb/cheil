@@ -2,7 +2,7 @@
 
 This project is a part of a test to evaluate my abilities.<br />
 Objectives:<br />
-  1.Recreate a single page<br />
+  1.Recreate a single page <h5>Done</h5><br />
   2.Make page adaptive/responsive<br />
   3.Construct a simple form<br />
   4.Implement Validation to the form<br />
