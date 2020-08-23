@@ -118,6 +118,10 @@
 .lastTable {
     font-family: 'SamsungOne700';
 }
+
+.error {
+    color: red;
+}
 @media screen and (max-width: 1024px) {
     h1{
         font-size: 39px!important;
