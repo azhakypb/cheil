@@ -2,24 +2,20 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import './index.css'
+import UpperHeader from './components/UpperHeader';
+import AfterHeader from './components/AfterHeader';
+import MidIcon from './components/MidIcon';
+import BottomEnd from './components/BottomEnd';
+import ValidationForm from './components/ValidationForm';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <UpperHeader/>
+       <AfterHeader/>
+       <MidIcon/>
+       <ValidationForm/>
+       <BottomEnd/>
     </div>
   );
 }
