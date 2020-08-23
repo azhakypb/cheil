@@ -9,4 +9,5 @@ Objectives:<br />
   5.Add simple backend API ----------------------> DONE<br />
   6.Connect Front-End to API ---------------------> DONE<br />
   7.Send data from the form to the API ----------> DONE <br />
-  8.Save recieved data to the database          <br />
+  8.Connect API to MySql -------------------------> DONE <br />
+  9.Save recieved data to the database          <br />

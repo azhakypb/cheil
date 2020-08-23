@@ -1,8 +1,21 @@
 const express = require('express')
 const logger = require('morgan');
 const cors = require('cors')
+var mysql = require('mysql');
 const app = express()
 const port = 8000
+
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "",
+  database: 'cheil'
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+});
 
 app.use(
   cors({
@@ -15,9 +28,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// app.get('/', (req, res) => {
-//   res.send('Hello World!')
-// })
+
 
 let user = [];
 
