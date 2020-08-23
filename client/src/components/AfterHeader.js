@@ -12,12 +12,12 @@ const AfterHeader = () => (
         <Col lg={3}>
           </Col>
           <Col lg={3}>
-          <div class="text-center">
+          <div className="text-center">
           <Button variant="outline-dark bt1">Регистрация</Button>
           </div>
           </Col>
           <Col lg={3}>
-          <div class="text-center">
+          <div className="text-center">
           <Button variant="link bt1 underL">Узнать больше</Button>
           </div>
           </Col>

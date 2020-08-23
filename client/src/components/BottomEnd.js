@@ -8,9 +8,9 @@ const BottomEnd = () => (
     <div>
         <h2 className="secondHeader"><p>Модель смартфонов, <br></br> участвующие в Акции</p></h2>
         <Container>
-            <div class='text-center lastTable'>
-                <table class="table">
-                    <thead class="thead-light">
+            <div className='text-center lastTable'>
+                <table className="table">
+                    <thead className="thead-light">
                         <tr>
                         <th scope="col">Модель</th>
                         <th scope="col">Сумма промо-кода</th>
@@ -34,11 +34,11 @@ const BottomEnd = () => (
             </div>
         </Container>
     
-        <div class="text-center"><Button variant="outline-dark bt1 bt2">Подробнее</Button></div>
-        <div class="text-center"><Image src={footer_img}/></div>
+        <div className="text-center"><Button variant="outline-dark bt1 bt2">Подробнее</Button></div>
+        <div className="text-center"><Image src={footer_img}/></div>
         <h2 className="secondHeader"><p>В акции участвуют точки продаж официальных <br></br>партнеров Samsung</p></h2>
         <h2 className="thirdHeader">Выбери нужный из списка магазинов в твоем городе</h2>
-        <div class="text-center"><Image src={components_img}/></div>
+        <div className="text-center"><Image src={components_img}/></div>
     </div>
 )
 

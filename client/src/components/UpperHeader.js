@@ -14,7 +14,7 @@ const UpperHeader = () => (
                 <Nav.Link href="#pricing">IT</Nav.Link>
             </Nav>
 
-            <div class="text-center sams">
+            <div className="text-center sams">
                 <Navbar.Brand href="#home">
                     <Image
                         src="https://img.global.news.samsung.com/ru/wp-content/uploads/2017/11/Samsung-logo.jpg"

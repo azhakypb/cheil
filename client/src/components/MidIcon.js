@@ -10,28 +10,28 @@ const MidIcon = () => (
       <Container>
         <Row>
           <Col sm={4}>
-            <div class="icon-style">
+            <div className="icon-style">
             <Image src={icon1}/>
             </div>
             
-            <p class="text-center bt1">Купи смартфон А-серии из списка ниже в магазинах офийиальных партнеров Samsung</p>
+            <p className="text-center bt1">Купи смартфон А-серии из списка ниже в магазинах офийиальных партнеров Samsung</p>
           </Col>  
           <Col sm={4}>
-          <div class="icon-style">
+          <div className="icon-style">
             <Image src={icon2}/>
             </div>
-            <p class="text-center bt1">Зарегистрируй чек покупки на сайте, прикрепив его фото</p>
+            <p className="text-center bt1">Зарегистрируй чек покупки на сайте, прикрепив его фото</p>
           </Col>
           <Col sm={4}>
-          <div class="icon-style">
+          <div className="icon-style">
             <Image src={icon3}/>
             </div>
-            <p class="text-center bt1">Получи промо-код на 5000 или 7000 тенге в в</p>
+            <p className="text-center bt1">Получи промо-код на 5000 или 7000 тенге в в</p>
           </Col>
         </Row>
       </Container>
       
-      <div class="button-style"><Button variant="outline-dark bt2">ПОЛНЫЕ ПРАВИЛА</Button></div>
+      <div className="button-style"><Button variant="outline-dark bt2">ПОЛНЫЕ ПРАВИЛА</Button></div>
       <h2 className="thirdHeader">Доставка Glovo доступна в трех городах: Нур-Султан, Алматы и Шымкент</h2>
       <h2 className="secondHeader">Регистрация</h2>
       <h2 className="thirdHeader">Заполни форму ниже и участвуй в розыгрыше призов</h2>
