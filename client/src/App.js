@@ -6,50 +6,57 @@ import AfterHeader from './components/AfterHeader'
 import MidIcon from './components/MidIcon'
 import BottomEnd from './components/BottomEnd'
 import { Button, Form} from 'react-bootstrap';
+import axios from 'axios'
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { 
-          apiResponse: "",
-          name: "",
-          email: "",
-          phone: "" 
-        }
-        this.handleName = this.handleName.bind(this);
-        this.handleEmail = this.handleEmail.bind(this);
-        this.handlePhone = this.handlePhone.bind(this);
-        this.sendAPI = this.sendAPI.bind(this);
-    }
-    handleName (event) {
-      this.setState({name: event.target.value}
-        );
-       // console.log('Form data', this.state.name)
-    }
-    handleEmail (event) {
-      this.setState({email: event.target.value}
-        );
-       // console.log('Form data', this.state.email)
-    }
-    handlePhone (event) {
-      this.setState({phone: event.target.value}
-        );
-       // console.log('Form data', this.state.phone)
-    }
-    sendAPI() {
-     // console.log('Form data', this.state.name, this.state.email, this.state.phone)
-    }
+  state = {
+    fullName: '',
+    email: '',
+    phone: '',
+};
 
-    // callAPI() {
-    //     fetch("http://localhost:9000/testAPI")
-    //         .then(res => res.text())
-    //         .then(res => this.setState({ apiResponse: res }))
-    //         .catch(err => err);
-    // }
+handleFullName = event => {
+  this.setState({
+    fullName: event.target.value
+  });
+}
+handleEmail = event => {
+  this.setState({
+    email: event.target.value
+  });
+}
+handlePhone = event => {
+  this.setState({
+    phone: event.target.value
+  });
+}
 
-    // componentDidMount() {
-    //     this.callAPI();
-    // }
+handleSubmit = event => {
+  event.preventDefault();
+
+  const user = {
+      fullName: this.state.fullName,
+      email: this.state.email,
+      phone: this.state.phone,
+  };
+
+  //x-www-form 
+  let formBody = [];
+  for (let property in user) {
+      let encodedKey = encodeURIComponent(property);
+      let encodedValue = encodeURIComponent(user[property]);
+      formBody.push(encodedKey + "=" + encodedValue);
+  }
+  formBody = formBody.join("&");
+
+  console.log(formBody);
+
+  axios.post(`http://localhost:8000/`, { formBody }, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
+    .then(res => {
+      console.log(res);
+      console.log(res.data);
+  })
+}
 
     render() {
         return (
@@ -57,20 +64,20 @@ class App extends Component {
             <UpperHeader></UpperHeader>
             <AfterHeader></AfterHeader>
             <MidIcon></MidIcon>
-            <Form className="validForm">
+            <Form className="validForm" onSubmit={this.handleSubmit}>
               <Form.Group controlId="formGroupName">
                   <Form.Label>ФИО</Form.Label>
-                  <Form.Control onChange={this.handleName} value={this.state.name} type="name" placeholder="Имя Фамилия Отчество" />
+                  <Form.Control onChange={this.handleFullName} value={this.name} type="name" placeholder="Имя Фамилия Отчество" />
               </Form.Group>
               <Form.Group controlId="formGroupEmail">
                 <Form.Label>Ваш email</Form.Label>
-                <Form.Control onChange={this.handleEmail} value={this.state.email} type="email" placeholder="example@exp.ex" />
+                <Form.Control onChange={this.handleEmail} value={this.email} type="email" placeholder="example@exp.ex" />
               </Form.Group>
               <Form.Group controlId="formGroupPhone">
                 <Form.Label>Номер телефона</Form.Label>
-                <Form.Control onChange={this.handlePhone} value={this.state.phone} type="phone" placeholder="+7 777 7777" />
+                <Form.Control onChange={this.handlePhone} value={this.phone} type="phone" placeholder="+7 777 7777" />
               </Form.Group>
-              <Button type="submit" onSubmit={this.sendAPI} variant="outline-dark bt1 bt2">ОТПРАВИТЬ ДАННЫЕ</Button>
+              <Button type="submit" variant="outline-dark bt1 bt2">ОТПРАВИТЬ ДАННЫЕ</Button>
             </Form>
             <BottomEnd></BottomEnd>
             <p className="App-intro">{this.state.apiResponse}</p>
