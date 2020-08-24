@@ -19,6 +19,6 @@ Objectives:<br />
   2. Start client with "npm start" inside of ./client folder
   3. Start api with "node app.js" inside of  ./api folder
   4. Must have working Mysql
-  5. Must create a database
+  5. Must create a database with name "cheil"
   6. Must fill out ./api/app.js Line:9-12 (instructions included there)
   7. Fill out the form on localhost:3000 (by default)
