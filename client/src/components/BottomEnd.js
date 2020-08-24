@@ -35,10 +35,10 @@ const BottomEnd = () => (
         </Container>
     
         <div className="text-center"><Button variant="outline-dark bt1 bt2">Подробнее</Button></div>
-        <div className="text-center"><Image src={footer_img}/></div>
+        <div className="text-center"><Image src={footer_img} width="80%"/></div>
         <h2 className="secondHeader"><p>В акции участвуют точки продаж официальных <br></br>партнеров Samsung</p></h2>
         <h2 className="thirdHeader">Выбери нужный из списка магазинов в твоем городе</h2>
-        <div className="text-center"><Image src={components_img}/></div>
+        <div className="text-center"><Image src={components_img} width="80%"/></div>
     </div>
 )
 

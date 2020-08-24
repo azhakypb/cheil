@@ -10,4 +10,15 @@ Objectives:<br />
   6.Connect Front-End to API ---------------------> DONE<br />
   7.Send data from the form to the API ----------> DONE <br />
   8.Connect API to MySql -------------------------> DONE <br />
-  9.Save recieved data to the database          <br />
+  9.Save recieved data to the database ---------->  DONE <br />
+
+
+
+Инструкция:
+  1. Clone git repository
+  2. Start client with "npm start" inside of ./client folder
+  3. Start api with "node app.js" inside of  ./api folder
+  4. Must have working Mysql
+  5. Must create a database
+  6. Must fill out ./api/app.js Line:9-12 (instructions included there)
+  7. Fill out the form on localhost:3000 (by default)

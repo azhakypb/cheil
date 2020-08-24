@@ -62,17 +62,17 @@ handleSubmit = event => {
             <Form className="validForm" onSubmit={this.handleSubmit.bind(this)}>
               <Form.Group controlId="formGroupName">
                   <Form.Label>ФИО</Form.Label>
-                  <Form.Control onChange={this.handleFullName} value={this.name} type="name" placeholder="Имя Фамилия Отчество" />
+                  <Form.Control required={true} onChange={this.handleFullName} value={this.name} type="name" placeholder="Имя Фамилия Отчество" />
               </Form.Group>
               <Form.Group controlId="formGroupEmail">
                 <Form.Label>Ваш email</Form.Label>
-                <Form.Control onChange={this.handleEmail} value={this.email} type="email" placeholder="example@exp.ex" />
+                <Form.Control required={true} onChange={this.handleEmail} value={this.email} type="email" placeholder="example@exp.ex" />
               </Form.Group>
               <Form.Group controlId="formGroupPhone">
                 <Form.Label>Номер телефона</Form.Label>
-                <Form.Control onChange={this.handlePhone} value={this.phone} type="phone" placeholder="+7 777 7777" />
+                <Form.Control required={true} onChange={this.handlePhone} value={this.phone} type="number" placeholder="+7 777 7777" />
               </Form.Group>
-              <Button type="submit" variant="outline-dark bt1 bt2">ОТПРАВИТЬ ДАННЫЕ</Button>
+              <Button type="submit" variant="outline-dark bt1">ОТПРАВИТЬ ДАННЫЕ</Button>
             </Form>
             <BottomEnd></BottomEnd>
             <p className="App-intro">{this.state.apiResponse}</p>

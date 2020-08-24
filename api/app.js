@@ -6,10 +6,10 @@ const app = express()
 const port = 8000
 
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: 'cheil'
+  host: "",         //в основном localhost
+  user: "",         //по стандарту root
+  password: "",     //your password
+  database: "cheil" //должна быть существующая бд
 });
 
 con.connect(function(err) {
@@ -29,18 +29,18 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 
-
-let user = [];
-
 app.post('/create', function(req, res) {
-  const newUser = {
+  var createUser = {
     fullName: req.body.fullName,
     email: req.body.email,
-    phone: req.body.phone,
-  };
+    phone: req.body.phone
+  }
 
-  user.push(newUser);
-  console.log(user);
+ con.query('INSERT INTO user SET ?', createUser, function (err, resp) {
+  if (err) throw err;
+  // if there are no errors send an OK message.
+  res.send('Saved succesfully');
+});
 });
 
 

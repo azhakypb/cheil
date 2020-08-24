@@ -7,13 +7,15 @@ import './Header.css';
 const UpperHeader = () => (
     <Container fluid>
         <Navbar bg="light header" expand="lg">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
                 <Nav.Link href="#home">МОБИЛЬНЫЕ УСТРОЙСТВА</Nav.Link>
                 <Nav.Link href="#features">ТВ И АУДИО</Nav.Link>
                 <Nav.Link href="#pricing">ДЛЯ ДОМА</Nav.Link>
                 <Nav.Link href="#pricing">IT</Nav.Link>
             </Nav>
-
+        </Navbar.Collapse>
             <div className="text-center sams">
                 <Navbar.Brand href="#home">
                     <Image
@@ -24,7 +26,7 @@ const UpperHeader = () => (
                 </Navbar.Brand>
             </div>
 
-
+            <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
                 <Nav.Link href="#home">EXPLORE</Nav.Link>
                 <Nav.Link href="#home">АКЦИИ</Nav.Link>
@@ -32,7 +34,8 @@ const UpperHeader = () => (
                 <Nav.Link href="#home">БИЗНЕС</Nav.Link>
                 <Nav.Link href="#home"><FontAwesomeIcon icon={faSearch}/></Nav.Link>
             </Nav>
-   
+            </Navbar.Collapse>
+            
         </Navbar>
     </Container>
 )
